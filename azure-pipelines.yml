@@ -26,7 +26,7 @@ steps:
 - task: AzureCLI@1
   inputs:
     azureSubscription: giolegal-devops-connection
-    #scriptLocation: 'scriptPath' # Options: inlineScript, scriptPath
+    scriptLocation: 'inlineScript'
     #scriptPath: # Required when scriptLocation == ScriptPath
     inlineScript: | # Required when scriptLocation == InlineScript
       mvn azure-functions:deploy
