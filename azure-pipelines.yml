@@ -32,3 +32,10 @@ steps:
       mvn package
     #workingDirectory: # Optional
     #failOnStderr: false # Optional- task: 
+
+# Publish Pipeline Artifact
+# Publish a local directory or file as a named artifact for the current pipeline.
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'function' 
+    targetPath: target/azure-functions/schengen-visa-application-20190211144316037
