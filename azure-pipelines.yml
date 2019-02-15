@@ -31,7 +31,7 @@ steps:
     #filePath: # Required when targetType == FilePath
     #arguments: # Optional
     script: |
-      sudo npm install -g azure-cli
+      sudo npm set progress=false npm install -g azure-cli
     #workingDirectory: # Optional
     #failOnStderr: false # Optional- task: 
       
