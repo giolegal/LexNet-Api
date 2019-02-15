@@ -20,16 +20,12 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- script: |
-    echo Deploy function
-    mvn azure-functions:deploy
-  displayName: 'Deploy function'
 
 # Azure CLI
 # Run Azure CLI commands against an Azure subscription in a Shell script when runnning on Linux agent or Batch script when running on Windows agent.
 - task: AzureCLI@1
   inputs:
-    azureSubscription: XYZ
+    azureSubscription: giolegal-devops-connection
     #scriptLocation: 'scriptPath' # Options: inlineScript, scriptPath
     #scriptPath: # Required when scriptLocation == ScriptPath
     inlineScript: | # Required when scriptLocation == InlineScript

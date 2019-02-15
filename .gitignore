@@ -1,3 +1,7 @@
+# files generate by VSCode
+.settings
+.project
+
 # Build output
 target/
 *.class
