@@ -21,31 +21,14 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-# Currently, Microsoft-hosted agents do not have the AZ CLI installed. You can either install it using npm install -g azure-cli (on Microsoft-hosted Linux agents, use sudo npm install -g azure-cli) or use a self-hosted agent with the AZ CLI pre-installed.
-# https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-cli?view=azure-devops#arguments
-# Bash
-# Run a Bash script on macOS, Linux, or Windows
+# create function locally
+# https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-functions-maven-plugin/readme?view=azure-java-stable#goals
 - task: Bash@3
   inputs:
     targetType: 'inline'
     #filePath: # Required when targetType == FilePath
     #arguments: # Optional
     script: |
-      sudo npm set progress=false npm install -g azure-cli
+      mvn package
     #workingDirectory: # Optional
     #failOnStderr: false # Optional- task: 
-      
-
-# Azure CLI
-# Run Azure CLI commands against an Azure subscription in a Shell script when runnning on Linux agent or Batch script when running on Windows agent.
-- task: AzureCLI@1
-  inputs:
-    azureSubscription: giolegal-devops-connection
-    scriptLocation: 'inlineScript'
-    inlineScript: | # Required when scriptLocation == InlineScript
-      mvn azure-functions:deploy
-    #arguments: # Optional
-    #addSpnToEnvironment: false # Optional
-    #useGlobalConfig: false # Optional
-    #workingDirectory: # Optional
-    #failOnStandardError: false # Optional
