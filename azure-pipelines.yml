@@ -38,4 +38,4 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'function' 
-    targetPath: target/azure-functions/schengen-visa-application-20190211144316037
+    targetPath: target/azure-functions/portal-lexnet

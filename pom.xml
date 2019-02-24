@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>giolegal</groupId>
-    <artifactId>schengen-visa-application</artifactId>
+    <artifactId>lexnet-portal</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -16,7 +16,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <azure.functions.maven.plugin.version>1.2.2</azure.functions.maven.plugin.version>
         <azure.functions.java.library.version>1.2.2</azure.functions.java.library.version>
-        <functionAppName>schengen-visa-application-20190211144316037</functionAppName>
+        <functionAppName>portal-lexnet</functionAppName>
         <functionAppRegion>westeurope</functionAppRegion>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
         <functionResourceGroup>giolegal</functionResourceGroup>
