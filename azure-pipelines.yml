@@ -37,5 +37,6 @@ steps:
 # Publish a local directory or file as a named artifact for the current pipeline.
 - task: PublishPipelineArtifact@0
   inputs:
-    artifactName: 'function' 
+    # 'drop' is default name for artifacts
+    # artifactName: 'drop' 
     targetPath: target/azure-functions/portal-lexnet
