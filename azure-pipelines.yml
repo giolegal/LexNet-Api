@@ -48,13 +48,14 @@ steps:
     
 # Publish Pipeline Artifact
 # Publish a local directory or file as a named artifact for the current pipeline.
-- task: PublishPipelineArtifact@0
-  inputs:
-    # 'drop' is default name for artifacts
-    # artifactName: 'drop' 
-    targetPath: $(Build.ArtifactStagingDirectory)
+# - task: PublishPipelineArtifact@0
+#  inputs:
+#    # 'drop' is default name for artifacts
+#    # artifactName: 'drop' 
+#    targetPath: $(Build.ArtifactStagingDirectory)
 
 # Release can't find produced artifacts
 # https://developercommunity.visualstudio.com/content/problem/349729/error-no-package-found-with-specified-pattern-dar1.html
 - task: PublishBuildArtifacts@1
+   # 'drop' is default name for artifacts
 
