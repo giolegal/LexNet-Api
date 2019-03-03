@@ -54,3 +54,7 @@ steps:
     # artifactName: 'drop' 
     targetPath: $(Build.ArtifactStagingDirectory)
 
+# Release can't find produced artifacts
+# https://developercommunity.visualstudio.com/content/problem/349729/error-no-package-found-with-specified-pattern-dar1.html
+- task: PublishBuildArtifacts@1
+
